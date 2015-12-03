@@ -1,0 +1,67 @@
+/*
+   New Perspectives on JavaScript, 2nd Edition
+   Tutorial 7
+   Tutorial Case
+
+   Author:   Norene Somerville
+   Date:     3/1/2011
+   Filename: web.css
+
+   This file contains styles used in the usconst.htm file to lay out 
+   the Web page and format the contents of the historic document
+
+*/
+
+body                   {margin: 0px; background-color: white}
+h1, h2, h3, h4, h5, h6 {font-family: Arial, Helvetica, sans-serif}
+
+
+#intro                 {position: absolute; top: 150px; left: 320px; width: 650px;}
+
+#toc                   {width: 215px; font-size: 9px; font-family: Arial, Helvetica, sans-serif;
+                        border: 3px solid black; background-color: rgb(48,0,24); 
+                        position: absolute;
+                        top: 140px; left: 5px; padding: 4px;}
+
+
+#doctitle              {position: absolute; top: 100px; left: 300px; width: 650px}
+#doctitle h1           {font-size: 32px; letter-spacing: 4px}
+
+#doc                   {position: absolute; top: 215px; left: 300px; width: 700px;
+                        }
+#doc h1                {font-size: 27px; text-decoration: underline;}
+#doc h2                {font-size: 20px; padding-left: 10px;}
+#doc h3                {font-size: 12px; margin-bottom: 0px; margin-left: 20px}
+
+#doc p                 {font-size: 14px; margin-left: 20px; text-align: justify; margin-right: 20px}
+#doc h3+p              {margin-top: 0px}
+
+#firstp:first-line     {font-variant: small-caps}
+#firstp span           {float: left; font-size: 300%; line-height: 0.8; margin-right: 2px}
+                           
+                            
+/* Styles for the dynamic table of contents */
+                          
+#toc h1                {font-size: 18px; text-align: center; background-color: rgb(40,0,20); 
+                        border: 2px solid black; 
+                        letter-spacing: 3px; margin: 0px; font-weight: normal; color: white;}
+
+#toc span              {margin-right: 4px; padding: 1px; border: 2px solid black; 
+                        text-align: center; font-size: 10px; cursor: pointer;
+                        background-color: white}
+#toc span:hover         {border-color: red;}
+                            
+#toc a                 {color: rgb(141,141,0); font-size: 15px; letter-spacing: 1px; padding: 1px; margin:5px;}
+#toc a:hover           {color: red;}
+
+#toc li                {list-style-type: none; text-transform: uppercase; 
+                        margin-top: 5px}
+                          
+                          
+#toc ol                {margin-left: 0px; padding-left: 5px; font-size: 15px;}
+#toc ol li             {margin-top: 2px}
+
+#toc ol ol             {margin-left: 20px}
+#toc ol ol li          {text-transform: none; margin-top: 3px}
+
+#toc ol ol ol li       {margin-top: 0px}

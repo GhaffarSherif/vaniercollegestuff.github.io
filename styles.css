@@ -1,0 +1,73 @@
+#menu {
+	  display: inline-block; 
+	  padding: 4px 4px 4px 4px;
+ 	  float:center;;
+    font-size: 10px;
+    font-family: Tahoma, Geneva, sans-serif;
+    font-weight: bold;
+    text-align: center;
+    text-shadow: 3px 2px 3px #333333;
+    background-color: #8AD9FF;
+    border-radius: 12px;
+    min-width: 50%;
+    min-height: 1%;
+
+
+}
+
+ol li a:hover{
+    color:red;
+}
+
+ol li{
+    font-size: 20px;
+    padding: 30px;
+    display: inline;
+    margin:10px 
+}
+
+ol li a{
+  color: black;
+  text-decoration: none;
+}
+
+#toc{
+  list-style: none;
+  float: left;
+  width: 170px;
+  background: #fff;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 2px;
+  padding: 3px;
+  margin: 8px 8px 8px 8px;
+  -moz-box-shadow: 0 0 5px rgba(0, 0, 0, 0.6);
+  -webkit-box-shadow: 0 0 5px rgba(0, 0, 0, 0.6);
+  box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.6);
+}
+#toctocdecoration{
+  background: #fff;
+  -webkit-border-radius:0.1px;
+  -moz-border-radius:0.1px;
+  border-radius: 0.1px;
+  border: solid;
+  margin: 4px 8px 8px 4px;
+}
+
+#toc h1, #toc h2, #toc h4{
+  margin: 0px;
+}
+#toc li{
+
+    margin: 0 0 2px 0;
+    
+}
+
+#homePageContent{
+    margin: 0px 8px 8px 20px;
+  
+    float: center;
+    display: inline-block;
+}
+
+h1, h2, h3, h4, h5, h6 {font-family: Arial, Helvetica, sans-serif}
