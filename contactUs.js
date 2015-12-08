@@ -20,6 +20,24 @@ function testLength(field)
 	}
 }
 
+function checkEmail()
+{
+	var field = document.getElementById("email");
+	var email = field.value;
+	regx = /[0-9a-zA-Z]*@[0-9a-zA-Z]*\.[comanet]/;
+	
+	if(regx.test(email))
+	{
+		field.style.backgroundColor = "white";
+		return true;
+	}
+	else
+	{
+		field.style.backgroundColor = "white";
+		return false;
+	}
+}
+
 function checkForm()
 {
 	if (!testLength("fname"))
@@ -37,23 +55,20 @@ function checkForm()
 		alert("You must enter an email.");
 		return false;
 	}
-	else if (!testLength("message"))
-	{
-		alert("You must enter a message.");
-		return false;
-	}
 	else if (!checkEmail())
 	{
 		alert("Invalid E-mail address.");
 		return false;
 	}
+	else if (!testLength("message"))
+	{
+		alert("You must enter a message.");
+		return false;
+	}
 	else
+	{
+		saveInfo();
+		alert("Thank you for contacting us!");
 		return true;
-}
-
-function checkEmail()
-{
-	var email = document.getElementById("email").value;
-	regx = /[0-9a-zA-Z]*@[0-9a-zA-Z]*\.[comanet]/;
-	return regx.test(email);
+	}
 }
