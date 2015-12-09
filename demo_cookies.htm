@@ -1,0 +1,246 @@
+<html>
+<head>
+<!-- 
+   New Perspectives on JavaScript, 2nd Edition
+   Tutorial 9
+   Tutorial Case
+
+   Regular Expression Demo
+   Author: Patrick Carey
+   Date:   3/1/2012
+
+   Filename:         demo_cookies.htm
+   Supporting files: demo.gif, demo2.gif
+-->
+<title>Cookies Demo</title>
+<style type="text/css">
+
+/* use for all demo pages */
+   html       {height: 100%}
+   body       {background-color: white; background-image: url(demo2.gif); margin: 0px; 
+               width: 100%; height: 100%}
+   #demo_page {background-color: white; 
+               border-right: 5px solid rgb(0,0,128); position: absolute; top: 0px; left: 0px;
+               width: 900px; padding-bottom: 15px; min-height: 100%}
+   * html #demo_page {height: 100%}
+
+   #demo_intro {width: 100%; position: relative; margin: 0px 10px}
+   #demo_intro table {margin: 0px; padding: 0px; border: 0px; width: 97%}
+   #demo_intro table td {vertical-align: bottom; padding-bottom: 5px}
+   #h2heading {color:yellow; background-image: url(demo.gif); letter-spacing: 0.75em; 
+               font-family: Arial, Helvetica, sans-serif; width: 97%; 
+               font-size: 1.5em; margin: 0px; text-align: right; 
+               border: 1px solid black}
+
+   #para      {font-size: 1em; border: 1px solid black; width: 97%;
+               background-color: ivory}
+   #para p    {margin: 8px}
+
+   #demo_container {position: relative; top: 10px; left: 0px; width: 100%;
+                    margin: 0px 10px}
+   #demo_footer {text-align: center; font-size: 8pt; border-top: 1px solid black; 
+                 margin: 25px 10px; width: 97%}
+   span.btitle {font-style: italic}
+
+/* styles specific to this demo */
+
+   #demo_container  {text-align: center}
+   #showB           {font-size: 11px; margin-right: 20px}
+   #deleteB         {font-size: 11px}
+
+   #dcp             {font-family: Courier New, monospace;
+                     color: white; background-color: blue;
+                     letter-spacing: 5px;
+                     font-size: 14px;
+                     margin-left: auto; margin-right: auto;
+                     margin-bottom: 0px;
+                     width: 450px}
+
+   #dcBox           {font-family: Courier New, monospace;
+                     font-size: 13px;
+                     width: 450px; height: 120px;
+                     border: 1px solid blue;
+                     padding: 4px;
+                     margin: 0px 0px 15px}
+    
+   table#cTable     {font-size: 11px; border-collapse: collapse; 
+                     border: 1px solid rgb(211, 211, 211); margin-left: auto; margin-right: auto}
+   table#cTable th  {font-weight: normal; text-align: center; font-size: 14px;
+                     border: 1px solid rgb(211, 211, 211); vertical-align: top;
+                     color: white; background-color: blue; padding: 5px;
+                     font-family: Arial, Helvetica, sans-serif}
+   table#cTable td  {font-weight: normal; font-size: 14px; text-align: left;
+                     border: 1px solid rgb(211, 211, 211); vertical-align: top;
+                     font-family: Courier New, Monospace; padding: 5px}
+   .cvta            {font-weight: normal; font-size: 14px; text-align: left;
+                     border-width: 0px; vertical-align: top; width: 300px; height: auto;
+                     font-family: Courier New, Monospace;
+                     overflow: auto}
+
+</style>
+
+<script type="text/javascript">
+
+   function showCookies() {
+
+      var cookieList = document.getElementById("cookieDIV");
+      cookieList.innerHTML = "";
+
+      if (document.cookie) {
+
+         var dcp = document.createElement("p");
+         dcp.id = "dcp";
+         dcp.innerHTML = "document.cookie";
+         var taBox = document.createElement("textarea");
+         taBox.id = "dcBox";
+         taBox.innerHTML = document.cookie;
+ 
+          
+         allCookies = document.cookie.split("; ");
+
+         var cookieTable = document.createElement("table");
+         cookieTable.id = "cTable";
+         var headRow = document.createElement("tr");
+         var firstCol = document.createElement("th");
+         firstCol.innerHTML = "Delete";
+         var secondCol = document.createElement("th");
+         secondCol.innerHTML = "Cookie Name";
+         var thirdCol = document.createElement("th");
+         thirdCol.innerHTML = "Cookie Value";
+         headRow.appendChild(firstCol);
+         headRow.appendChild(secondCol);
+         headRow.appendChild(thirdCol);
+         cookieTable.appendChild(headRow);
+
+         
+         for (var i = 0; i < allCookies.length; i++) {
+            var cName = allCookies[i].split("=")[0];
+
+            var cookieRow = document.createElement("tr");
+
+            var checkCell = document.createElement("td");
+            var checkboxCookie = document.createElement("input");
+            checkboxCookie.type = "checkbox";
+            checkboxCookie.className = "cookieCheck";
+            checkboxCookie.cookie = cName;
+            checkCell.appendChild(checkboxCookie);
+
+            var nameCell = document.createElement("td");
+            nameCell.innerHTML = cName;
+
+            var cookieCell = document.createElement("td");
+            var valuetextarea = document.createElement("div");
+            valuetextarea.className = "cvta";
+            valuetextarea.innerHTML = allCookies[i].slice(allCookies[i].indexOf("=")+1);
+            cookieCell.appendChild(valuetextarea);
+
+            cookieRow.appendChild(checkCell);
+            cookieRow.appendChild(nameCell);
+            cookieRow.appendChild(cookieCell);
+
+            cookieTable.appendChild(cookieRow);
+        }
+        
+
+         cookieList.appendChild(dcp);
+         cookieList.appendChild(taBox);
+
+         if (cookieList.insertAdjacentHTML) {
+            cookieList.insertAdjacentHTML("BeforeEnd", cookieTable.outerHTML);
+         } else {
+            cookieList.appendChild(cookieTable);
+         }
+
+      } else {
+         cookieList.innerHTML = "No Cookies Found For This Folder";
+      }         
+      
+   }
+
+   function deleteCookies() {
+   
+      var selectedChecks = new Array();
+      for (var i=0; i < document.getElementsByTagName("input").length; i++) {
+         var inputElem = document.getElementsByTagName("input")[i];
+
+         if (inputElem.className == "cookieCheck" && inputElem.checked) {
+            selectedChecks.push(inputElem);
+         }
+      }
+
+      for (var i = selectedChecks.length - 1; i >= 0; i--) {
+         removeCookie(selectedChecks[i].cookie);
+         selectedChecks[i].parentNode.parentNode.style.display = "none";
+      }
+
+      document.getElementById("dcBox").innerHTML = document.cookie;
+
+      if (document.cookie == "") {
+         document.getElementById("cookieDIV").innerHTML = "No Cookies left in this Folder";
+      }
+
+   }
+
+   function removeCookie(cName) {
+
+      if (document.cookie) {
+      
+         allCookies = document.cookie.split("; ");
+         for (var i = 0; i < allCookies.length; i++) {
+            cookieNamVal = allCookies[i].split("=");
+            if (cookieNamVal[0] == cName) {
+               document.cookie = cName + "=;expires=Thu, 01-Jan-1970 00:00:01 GMT";
+            }
+         }         
+      }
+
+   }
+
+</script>
+
+</head>
+
+<body>
+<form id="cform" name="cform" action="">
+<div id="demo_page">
+
+<div id="demo_intro">
+   <table>
+   <tr><td style="width: 50%"><img src="cengage.jpg" alt="Course Technology Cengage Learning" /></td>
+       <td style="width: 50%; text-align:right; font-family: Arial, Helvetica, sans-serif; font-size: 14pt">
+          New Perspectives on JavaScript, 2nd Edition<br />Tutorial 9
+   </td></tr>
+   </table>
+
+   <h2 id="h2heading">Cookies </h2>
+   <div id="para">
+   <p><b>Cookies</b> are used to store user information within text files on the user's own computer.
+      This demo page can be used to display a list of the cookies associated with the folder containing
+      the demo page file. To list all of the cookies currently loaded, click the <b>Show Cookies</b>
+      button. To delete a cookie, click the check box next to the cookie to select it and then click
+      the <b>Delete Selected Cookies</b> button.
+   </p>
+   </div>
+</div>
+
+<div id="demo_container">
+   <p id="buttons">
+      <input type="button" onclick="showCookies()" value="Show Cookies" id="showB" />
+      <input type="button" onclick="deleteCookies()" value="Delete Selected Cookies" id="deleteB" />
+   </p>
+   <div id="cookieDIV"></div>
+
+</div>
+
+<div id="demo_footer">
+   Carey, P.
+   <span class="btitle">New Perspectives on JavaScript, 2nd Edition</span>,
+   Course Technology: Boston, 2009.
+</div>
+
+</div>
+</form>
+</body>
+</html>
+
+
