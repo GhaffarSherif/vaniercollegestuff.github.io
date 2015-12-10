@@ -1,0 +1,155 @@
+@import 'globals.styl'
+
+html, body {
+    height: 100%
+}
+
+body {
+    background-color: col4
+    // background-image: url("http://colourlovers.com.s3.amazonaws.com/images/patterns/5000/5000194.png?1448073728")
+    // background-image: url("http://colourlovers.com.s3.amazonaws.com/images/patterns/5000/5000213.png?1448074918")
+    // background-image: url("http://colourlovers.com.s3.amazonaws.com/images/patterns/465/465753.png?1241359007")
+    // background-image: url("http://colourlovers.com.s3.amazonaws.com/images/patterns/5000/5000331.png?1448080240")
+    // background-image: url("http://colourlovers.com.s3.amazonaws.com/images/patterns/2290/2290455.png?1335954364")
+    // background-image: url("http://colourlovers.com.s3.amazonaws.com/images/patterns/2503/2503698.png?1349271859")
+    // background-image: url("http://colourlovers.com.s3.amazonaws.com/images/patterns/2052/2052902.png?1324601754")
+    // background-image: url("http://colourlovers.com.s3.amazonaws.com/images/patterns/1464/1464403.png?1304629821")
+    // background-image: url("http://colourlovers.com.s3.amazonaws.com/images/patterns/2268/2268759.png?1330868823")
+    background-image: url("http://colourlovers.com.s3.amazonaws.com/images/patterns/1279/1279195.png?1296941327")
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'PixelCowboy'
+    font-weight: normal
+}
+
+.dmenu-item {
+    background-color: col1
+    text-align: center
+    height: 64px
+    transition-duration(0.2s)
+    drop-shadow(0px, 2px, 2px, 0.8)
+
+    a {
+        transition-duration(0.2s)
+        font-family: 'PixelCowboy'
+        font-weight: normal
+        color: col5
+        text-transform: uppercase
+        text-decoration: none
+        line-height: 64px
+        display: block
+        height: 100%
+        width: 100%
+    }
+}
+.dmenu-item:hover {
+    background-color: col5
+
+    a {
+        color: col1
+        text-transform: uppercase
+    }
+}
+.dmenu-item-selected {
+    background-color: col3
+
+    a {
+        color: col4
+    }
+}
+
+.dpanel {
+    font-family: 'PixelCowboy'
+    color: col5
+    background-color: col1
+    padding: 16px
+    drop-shadow(0px, 2px, 2px, 0.8)
+    padding-top: 4px
+
+    h2 {
+        margin: 4px;
+        padding: 0px;
+    }
+}
+
+.dselectlist {
+    list-style-type: none
+    padding: 0px
+    margin: 8px 0px 12px 0px
+    height: 156px
+    overflow: hidden
+    overflow-y: scroll
+}
+.dselectlist li:first-child h3 {
+    margin-top: 0px
+}
+.dselectlist li:last-child h3 {
+    margin-bottom: 0px
+}
+.dselectlist li {
+    font-family: 'PixelCowboy'
+    color: col5
+    background-color: col2
+    drop-shadow(0px, 2px, 2px, 0.8)
+}
+.dselectlist li:hover, .dselectlist .dactiveselect {
+    background-color: col5
+    color: col2
+}
+
+.dfooter {
+    font-family: 'PixelCowboy'
+    color: col5
+    background-color: col1
+    text-align: center
+    text-transform: uppercase
+    height: 64px
+    line-height: 64px
+    drop-shadow(0px, -2px, 2px, 0.8)
+}
+article {
+    padding: 8px
+    padding-left: 16px
+    padding-right: 16px
+    text-align: center
+}
+
+#doverlay {
+	display: none
+	z-index: 2
+	background: #000
+    opacity: 0.5
+	position: fixed
+	width: 100%
+	height: 100%
+	top: 0px
+	left: 0px
+	text-align: center
+}
+#dselectbox {
+	display: none
+	position: fixed
+	z-index: 3
+    overflow: hidden
+    overflow-y: scroll
+    width: 10%
+    height: 100%
+    padding: 0px
+    margin: 0px
+    border: 0px
+    background-color: col1
+}
+#dselectbox ul {
+    list-style-type: none
+    padding: 0px
+    margin: 0px
+    border: 0px
+}
+#dselectbox ul li {
+
+}
+#dselectbox ul li img {
+    display: block;
+    width: 100%
+}

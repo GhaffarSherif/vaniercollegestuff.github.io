@@ -1,0 +1,46 @@
+// http://www.colourlovers.com/palette/625987/dont_you_go_down
+// col1 = #EDEBE6 //whiter
+// col2 = #D6E1C7 //white
+// col3 = #94C7B6 //blue
+// col4 = #403B33 //grey
+// col5 = #D3643B //orange
+
+// http://www.colourlovers.com/palette/1098589/coup_de_gr%C3%A2ce
+// col1 = #99B898
+// col2 = #FECEA8
+// col3 = #FF847C
+// col4 = #E84A5F
+// col5 = #2A363B
+
+// http://www.colourlovers.com/palette/728391/Dig_My_Olive_Branch
+col1 = #300018
+col2 = #5A3D31
+col3 = #837B47
+col4 = #ADB85F
+col5 = #E5EDB8
+
+// http://www.dafont.com/pixel-cowboy.font
+@font-face
+   font-family PixelCowboy
+   font-style normal
+   src url(../fonts/PixelCowboy.otf)
+
+vendor1(prop, arg1)
+    -webkit-{prop} arg1
+    -moz-{prop} arg1
+    -ms-{prop} arg1
+    -o-{prop} arg1
+    {prop} arg1
+
+vendor4(prop, arg1, arg2, arg3, arg4)
+    -webkit-{prop} arg1 arg2 arg3 arg4
+    -moz-{prop} arg1 arg2 arg3 arg4
+    -ms-{prop} arg1 arg2 arg3 arg4
+    -o-{prop} arg1 arg2 arg3 arg4
+    {prop} arg1 arg2 arg3 arg4
+
+transition-duration(duration)
+    vendor1('transition-duration', duration)
+
+drop-shadow(xaxis, yaxis, blur, alpha)
+    vendor4('box-shadow', xaxis, yaxis, blur, rgba(0, 0, 0, alpha))
