@@ -1,4 +1,16 @@
+window.onload = setupImage;
+
 var imageNum = 0;
+
+function setupImage()
+{
+	var image = document.getElementById("image");
+	
+	image.parentNode.style.left = (window.innerWidth/2)-(parseFloat(image.style.width)/2) + "px";
+	image.parentNode.style.right = (window.innerWidth/2)+(parseFloat(image.style.width)/2) + "px";
+	image.parentNode.style.top = (window.innerHeight/2)-(parseFloat(image.style.width)/2) + "px";
+	image.parentNode.style.bottom = (window.innerHeight/2)+(parseFloat(image.style.width)/2) + "px";
+}
 
 function controlGIF()
 {
@@ -11,7 +23,7 @@ function controlGIF()
 
 		// Record the initial position of the mouse and the slider bar
 		var initX = evt.clientX;
-		var imageStartPos = image.parentNode.style.left;
+		var imageStartPos = parseInt(image.parentNode.style.left);
 		var imageEndPos = imageStartPos + parseFloat(image.style.width);
 
 		// As the mouse moves, move the slider bar from its initial position
@@ -21,10 +33,10 @@ function controlGIF()
 			var newX = evt.clientX;
 			var distanceX = newX - initX;
 			var percentage = distanceX/(imageEndPos-imageStartPos);
-			imageNum = (149*percentage)-1;
+			imageNum = (37*percentage)-1;
 
-			if (imageNum >= 0 && imageNum <= 148)
-				image.src = imageNum + ".gif";
+			if (imageNum >= 0 && imageNum <= 36)
+				image.src = "fun-imgs/tmp-" + Math.floor(imageNum) + ".gif";
 		}
 	}
 
