@@ -1,82 +1,112 @@
  <html>
  <head>
- 	<title>Contact Us</title>
- 	<meta name="description" content="Project for Internet-II class">
-	<meta name="keywords" content="HTML,CSS,XML,JavaScript">
-	<meta name="author" content="Sherif Ghaffar, Lucas Kourouklis">
-	<link rel="stylesheet" type="text/css" href="styles.css">
-	<link rel="stylesheet" type="text/css" href="lib/pure-min.css">
-	<link rel="stylesheet" type="text/css" href="lib/grids-responsive-min.css">
-	<link rel="stylesheet" type="text/css" href="styles/default.css">
+ 	<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Clock Slap</title>
+
+    <link rel="stylesheet" href="lib/pure-min.css">
+    <link rel="stylesheet" href="lib/grids-responsive-min.css">
+    <link rel="stylesheet" href="styles/default.css">
+	
 	<script src="js/cookies.js" type="text/javascript"></script>
 	<script src="js/createCookies.js" type="text/javascript"></script>
  	<script src="js/contactUs.js" type="text/javascript"></script>
  </head>
  <body>
- 	<header>
+ 	<div id="doverlay"></div>
+    <div id="dselectbox">
+        <ul>
+            <li><img src="img/bg0.png"/></li>
+            <li><img src="img/bg1.png"/></li>
+            <li><img src="img/bg2.png"/></li>
+            <li><img src="img/bg3.png"/></li>
+            <li><img src="img/bg4.png"/></li>
+            <li><img src="img/bg5.png"/></li>
+            <li><img src="img/bg6.png"/></li>
+            <li><img src="img/bg7.png"/></li>
+            <li><img src="img/bg8.png"/></li>
+            <li><img src="img/bg9.png"/></li>
+        </ul>
+    </div>
+    <header>
         <div id="dmenu" class="dmenu pure-g">
-            <div class="dmenu-item pure-u-1 pure-u-md-1-6">
-                <a href="home.html" class="">Clock Slap</a>
+            <div class="dmenu-item pure-u-1 pure-u-lg-1-4">
+                <a href="index.html" class="">Clock Slap</a>
             </div>
-            <div class="dmenu-item pure-u-1 pure-u-md-1-6">
+            <div class="dmenu-item pure-u-1 pure-u-lg-1-8">
                 <a href="fun.html" class="">Fun</a>
             </div>
-            <div class="dmenu-item pure-u-1 pure-u-md-1-6">
+            <div class="dmenu-item pure-u-1 pure-u-lg-1-8">
                 <a href="games.html" class="">Games</a>
             </div>
-			<div class="dmenu-item pure-u-1 pure-u-md-1-6">
+            <div class="dmenu-item pure-u-1 pure-u-lg-1-8">
                 <a href="#" class="">GIFs</a>
             </div>
-            <div class="dmenu-item pure-u-1 pure-u-md-1-6">
+            <div class="dmenu-item pure-u-1 pure-u-lg-1-8">
                 <a href="contactUs.html" class="">Contact</a>
             </div>
-			<div class="dmenu-item pure-u-1 pure-u-md-1-6">
+            <div class="dmenu-item pure-u-1 pure-u-lg-1-8">
                 <a href="faq.html" class="">FAQ</a>
+            </div>
+            <div id="settings" class="dmenu-item pure-u-1 pure-u-lg-1-8">
+                <a href="#" class="">Settings</a>
             </div>
         </div>
     </header>
-	<br />
-	<div name="homePageContent" id="homePageContent">
-	<form id="form2" method="post" action="">
-		<div id="main">
-			<h1>Contact Us</h1>
+	
+	<article>
+		<form id="form2" method="post" action="">
+			<div id="main">
+				<h1>Contact Us</h1>
 
-			<fieldset id="dtable">
-				<legend>Enter your information</legend>
+				<fieldset id="dtable">
+					<legend>Enter your information</legend>
 
-				<table>
-					<tr id="dtable-item1">
-						<td class="labelcell">First Name<span style="color: red">*</span></td>
-						<td class="inputcell2">
-						<input class="text" name="fname" id="fname" size="25" />
-						</td>
-					</tr>
-					<tr id="dtable-item2">
-						<td class="labelcell">Last Name<span style="color: red">*</span></td>
-						<td class="inputcell2">
-						<input class="text" name="lname" id="lname" size="25" />
-						</td>
-					</tr>
-					<tr id="dtable-item3">
-						<td class="labelcell">E-mail<span style="color: red">*</span></td>
-						<td class="inputcell2">
-						<input class="text" name="email" id="email" size="25" />
-						</td>
-					</tr>
-					<tr id="dtable-item4">
-						<td class="labelcell">Message<span style="color: red">*</span></td>
-						<td class="inputcell2">
-							<textarea id="message" name="message" cols="50" rows=""></textarea>
-						</td>
-					</tr>
-				</table>
-			</fieldset>
+					<table>
+						<tr id="dtable-item1">
+							<td class="labelcell">First Name<span style="color: red">*</span></td>
+							<td class="inputcell2">
+							<input class="text" name="fname" id="fname" size="25" />
+							</td>
+						</tr>
+						<tr id="dtable-item2">
+							<td class="labelcell">Last Name<span style="color: red">*</span></td>
+							<td class="inputcell2">
+							<input class="text" name="lname" id="lname" size="25" />
+							</td>
+						</tr>
+						<tr id="dtable-item3">
+							<td class="labelcell">E-mail<span style="color: red">*</span></td>
+							<td class="inputcell2">
+							<input class="text" name="email" id="email" size="25" />
+							</td>
+						</tr>
+						<tr id="dtable-item4">
+							<td class="labelcell">Message<span style="color: red">*</span></td>
+							<td class="inputcell2">
+								<textarea id="message" name="message" cols="50" rows=""></textarea>
+							</td>
+						</tr>
+					</table>
+				</fieldset>
 
-			<p id="submitbutton">
-				<input type="submit" name="submit" id="submit" value="Submit" />
-			</p>
-		</div>
-	</form>
-</div>
+				<p id="submitbutton">
+					<input type="submit" name="submit" id="submit" value="Submit" />
+				</p>
+			</div>
+		</form>
+	</article>
+	
+	<footer>
+        <div id="footer" class="dfooter">
+            Copyright 2015 Evil Corp
+        </div>
+    </footer>
+    <script src="lib/jquery.js"></script>
+    <script defer="defer" src="scripts/menu.js"></script>
+    <script src="scripts/scroll.js"></script>
+    <script defer="defer" src="scripts/footer.js"></script>
+    <script defer="defer" src="scripts/settings.js"></script>
+	
 </body>
 </html> 
