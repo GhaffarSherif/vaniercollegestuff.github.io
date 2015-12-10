@@ -22,8 +22,8 @@
     </div>
 </div>
 ```
-pure-u-md-1-4: notice the 1/4 -> 25% of the dmenu's width
-pure-u-3-4: 75% of the dmenu's width WHEN THE WINDOW BECOMES SMALL
+* pure-u-md-1-4: notice the 1/4 -> 25% of the dmenu's width
+* pure-u-3-4: 75% of the dmenu's width WHEN THE WINDOW BECOMES SMALL
 
 # To apply the CSS style
 ```
