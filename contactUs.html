@@ -59,36 +59,40 @@
 			<div id="main">
 				<h1>Contact Us</h1>
 
-				<fieldset id="dtable">
-					<legend>Enter your information</legend>
+				<panel id="classes">
+					
 
-					<table>
-						<tr id="dtable-item1">
-							<td class="labelcell">First Name<span style="color: red">*</span></td>
-							<td class="inputcell2">
-							<input class="text" name="fname" id="fname" size="25" />
-							</td>
-						</tr>
-						<tr id="dtable-item2">
-							<td class="labelcell">Last Name<span style="color: red">*</span></td>
-							<td class="inputcell2">
-							<input class="text" name="lname" id="lname" size="25" />
-							</td>
-						</tr>
-						<tr id="dtable-item3">
-							<td class="labelcell">E-mail<span style="color: red">*</span></td>
-							<td class="inputcell2">
-							<input class="text" name="email" id="email" size="25" />
-							</td>
-						</tr>
-						<tr id="dtable-item4">
-							<td class="labelcell">Message<span style="color: red">*</span></td>
-							<td class="inputcell2">
-								<textarea id="message" name="message" cols="50" rows=""></textarea>
-							</td>
-						</tr>
-					</table>
-				</fieldset>
+					<div class="pure-u-1-2 dpanel">
+						<div>
+							<legend>Enter your information</legend>
+							<table>
+								<tr id="dtable-item1">
+									<td class="labelcell">First Name<span style="color: red">*</span></td>
+									<td class="inputcell2">
+									<input class="text" name="fname" id="fname" size="25" />
+									</td>
+								</tr>
+								<tr id="dtable-item2">
+									<td class="labelcell">Last Name<span style="color: red">*</span></td>
+									<td class="inputcell2">
+									<input class="text" name="lname" id="lname" size="25" />
+									</td>
+								</tr>
+								<tr id="dtable-item3">
+									<td class="labelcell">E-mail<span style="color: red">*</span></td>
+									<td class="inputcell2">
+									<input class="text" name="email" id="email" size="25" />
+									</td>
+								</tr>
+								<tr id="dtable-item4">
+									<td class="labelcell">Message<span style="color: red">*</span></td>
+									<td class="inputcell2">
+										<textarea id="message" name="message" cols="50" rows="" style="resize: none; width: 75%;"></textarea>
+									</td>
+								</tr>
+							</table>
+						</div>
+					</div>
 
 				<p id="submitbutton">
 					<input type="submit" name="submit" id="submit" value="Submit" />
