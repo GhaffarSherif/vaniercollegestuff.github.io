@@ -8,6 +8,23 @@
 * .css into styles
 * .js into scripts
 
+# BEAUTIFUL FRAMES
+```
+<div class="dmenu pure-g">
+    <div class="pure-u-3-4 pure-u-md-1-4 dpanel">
+    	YOUR STUFF HERE
+    </div>
+    <div class="pure-u-3-4 pure-u-md-1-4 dpanel">
+    	YOUR STUFF HERE
+    </div>
+    <div class="pure-u-3-4 pure-u-md-1-4 dpanel">
+    	YOUR STUFF HERE
+    </div>
+</div>
+```
+pure-u-md-1-4: notice the 1/4 -> 25% of the dmenu's width
+pure-u-3-4: 75% of the dmenu's width WHEN THE WINDOW BECOMES SMALL
+
 # To apply the CSS style
 ```
 <html>
