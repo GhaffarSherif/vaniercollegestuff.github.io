@@ -1,38 +1,202 @@
-<html>
+<html> 
   <head>
+    <title>Internet-II Project</title>
+
   	<meta name="description" content="Project for Internet-II class">
 	<meta name="keywords" content="HTML,CSS,XML,JavaScript">
 	<meta name="author" content="Sherif Ghaffar, ">
+
 	<link rel="stylesheet" type="text/css" href="styles.css">
 	<link rel="stylesheet" type="text/css" href="default.css">
 	<link rel="stylesheet" type="text/css" href="lib/pure-min.css">
 	<link rel="stylesheet" type="text/css" href="lib/grids-responsive-min.css">
 	<link rel="stylesheet" type="text/css" href="styles/default.css">
 	
+    <link rel="stylesheet" type="text/css" href="web.css">
+    <script type="text/javascript" src="toc.js" ></script>
+    <script type="text/javascript" src="contactUs.js"></script>
  </head>
  <body>
- 		<header>
+  <div id="doverlay"></div>
+    <div id="dselectbox">
+        <ul>
+            <li><img src="img/bg0.png"/></li>
+            <li><img src="img/bg1.png"/></li>
+            <li><img src="img/bg2.png"/></li>
+            <li><img src="img/bg3.png"/></li>
+            <li><img src="img/bg4.png"/></li>
+            <li><img src="img/bg5.png"/></li>
+            <li><img src="img/bg6.png"/></li>
+            <li><img src="img/bg7.png"/></li>
+            <li><img src="img/bg8.png"/></li>
+            <li><img src="img/bg9.png"/></li>
+        <ul/>
+    </div>
+
+    <header>
         <div id="dmenu" class="dmenu pure-g">
-            <div class="dmenu-item pure-u-1 pure-u-md-1-6">
+            <div class="dmenu-item pure-u-1 pure-u-lg-1-4">
                 <a href="index.html" class="">Clock Slap</a>
             </div>
-            <div class="dmenu-item pure-u-1 pure-u-md-1-6">
+            <div class="dmenu-item pure-u-1 pure-u-lg-1-8">
                 <a href="fun.html" class="">Fun</a>
             </div>
-            <div class="dmenu-item pure-u-1 pure-u-md-1-6">
+            <div class="dmenu-item pure-u-1 pure-u-lg-1-8">
                 <a href="games.html" class="">Games</a>
             </div>
-			<div class="dmenu-item pure-u-1 pure-u-md-1-6">
+            <div class="dmenu-item pure-u-1 pure-u-lg-1-8">
                 <a href="#" class="">GIFs</a>
             </div>
-            <div class="dmenu-item pure-u-1 pure-u-md-1-6">
+            <div class="dmenu-item pure-u-1 pure-u-lg-1-8">
                 <a href="contactUs.html" class="">Contact</a>
             </div>
-			<div class="dmenu-item pure-u-1 pure-u-md-1-6">
+            <div class="dmenu-item pure-u-1 pure-u-lg-1-8">
                 <a href="faq.html" class="">FAQ</a>
+            </div>
+            <div id="settings" class="dmenu-item pure-u-1 pure-u-lg-1-8">
+                <a href="#" class="">Settings</a>
             </div>
         </div>
     </header>
+
+
+
+   
+    
+    <div id="doctitle"><h1>Frequently Asked Questions</h1></div>
+
+    <h3 id="intro"></h3>
+         
+    <div id="doc">
+
+        <h1>Questions</h1>
+        <h2></h2>
+        <p></p>
+
+        <h2>What's the point of this website?</h2>
+        <p>
+            Well. This is actually for a group project for our Internet-2 course at Vanier college. 
+        </p>
+
+
+        <h2>No but whats the point point?</h2>
+        <p>
+            This website is supposed to be a fun multimedia website where you can visit, sit back and relax by looking at funny gifs or play games or just messing around in the fun page.
+        </p>
+
+        <h2>What is Clock Slap?</h2>
+        <p>
+            It's an inside joke. Really.
+        </p>
+
+        <h2>Who are the developpers</h2>
+        <p>
+            Its on the homepage. You can't have missed it ;)
+        </p>
+
+        <h2>Is this FAQ page automated?</h2>
+        <p>
+            No. These Questions are selected by the developpers. However visitors are able to send in questions by filling out the <a href="#question">FORM</a> bellow.
+        </p>
+
+
+        <h2>Who designed the website</h2>
+        <p>
+            Mark designed the generic css. That s the background and the menu bar you see in every page. Other than that, we all designed the content in our pages.
+        </p>
+        
+        <h2></h2>
+        <p></p>
+        
+        <h2></h2>
+        <p></p>
+               
+        <h2></h2>
+        <p><br /></p>
+
+
+        <h1 name="question" id="question">Leave Question</h1>
+        <h2></h2>
+        <p>
+            <form id="form2" method="get" action="mailto:askyourquestionsvanier@hotmail.com" method="post" enctype="text/plain">
+
+                <div id="main">
+                    We will look through your question as soon as we can!
+                    
+                    <fieldset id="dtable">
+
+                        <legend><br />Fill out the following</legend>
+                        <br />
+                        
+                        <table>
+                            <tr id="dtable-item">
+                                <td class="labelcell">First Name <span style="color: red">*</span></td>
+                                <td class="inputcell2">
+                                <input class="text" name="fname" id="fname" size="25" />
+                                </td>
+                            </tr>
+
+
+                            <tr id="dtable-item">
+                                <td class="labelcell">Last Name <span style="color: red">*</span></td>
+                                <td class="inputcell2">
+                                <input class="text" name="lname" id="lname" size="25" />
+                                </td>
+
+                            </tr>
+
+                            <tr id="dtable-item">
+                                <td class="labelcell">Question <span style="color: red">*</span></td>
+                                <td class="inputcell2">
+                                    <textarea id="message" name="message" cols="50" rows=""></textarea>
+                                </td>
+                            </tr>
+                        </table>
+                    </fieldset>
+
+                    <p id="submitbutton">
+                        <input type="submit" name="submit" id="submit" value="Submit Question" /> <input type="reset" value="Reset">
+                    </p>
+
+                </div>
+            </form>
+        </p>
+
+
+
+
+        <h2></h2>
+        <p></p>
+        <h2></h2>
+        <p></p>
+        
+    </div>
+
+
+    <article>
+        <div class="dmenu pure-g">
+            <div class="pure-u-3-4 pure-u-md-1-4 dpanel">
+                 <div id="toc"></div>
+            </div>
+            <div class="pure-u-3-4 pure-u-md-1-4 dpanel">
+                YOUR STUFF HERE
+            </div>
+           
+        </div>
+
+    </acticle>
+
+    <footer>
+        <div id="footer" class="dfooter">
+            Copyright 2015 Evil Corp
+        </div>
+    </footer>
+
+    <script src="lib/jquery.js"></script>
+    <script defer="defer" src="scripts/menu.js"></script>
+    <script src="scripts/scroll.js"></script>
+    <script defer="defer" src="scripts/footer.js"></script>
+    <script defer="defer" src="scripts/settings.js"></script>
  </body>
 
  </html>

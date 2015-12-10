@@ -1,7 +1,8 @@
  <html>
  <head>
 
- 	<title>Project</title>
+ 	<title>Internet-II Project</title>
+    
  	<meta name="description" content="Project for Internet-II class">
 	<meta name="keywords" content="HTML,CSS,XML,JavaScript">
 	<meta name="author" content="Sherif Ghaffar, ">
@@ -14,83 +15,140 @@
     
     <link rel="stylesheet" type="text/css" href="web.css">
     <script type="text/javascript" src="toc.js" ></script>
+    <!--<script type="text/javascript" src="lastVisit.js"></script>-->
  
  </head>
  <body>
-	<header>
-        <div id="dmenu" class="dmenu pure-g">
-            <div class="dmenu-item pure-u-1 pure-u-md-1-6">
-                <a href="index.html" class="">Clock Slap</a>
+
+     <div id="doverlay"></div>
+     <div id="dselectbox">
+         <ul>
+             <li><img src="img/bg0.png"/></li>
+             <li><img src="img/bg1.png"/></li>
+             <li><img src="img/bg2.png"/></li>
+             <li><img src="img/bg3.png"/></li>
+             <li><img src="img/bg4.png"/></li>
+             <li><img src="img/bg5.png"/></li>
+             <li><img src="img/bg6.png"/></li>
+             <li><img src="img/bg7.png"/></li>
+             <li><img src="img/bg8.png"/></li>
+             <li><img src="img/bg9.png"/></li>
+         <ul/>
+     </div>
+     <header>
+         <div id="dmenu" class="dmenu pure-g">
+             <div class="dmenu-item pure-u-1 pure-u-lg-1-4">
+                 <a href="index.html" class="">Clock Slap</a>
+             </div>
+             <div class="dmenu-item pure-u-1 pure-u-lg-1-8">
+                 <a href="fun.html" class="">Fun</a>
+             </div>
+             <div class="dmenu-item pure-u-1 pure-u-lg-1-8">
+                 <a href="games.html" class="">Games</a>
+             </div>
+            <div class="dmenu-item pure-u-1 pure-u-lg-1-8">
+                 <a href="#" class="">GIFs</a>
+             </div>
+             <div class="dmenu-item pure-u-1 pure-u-lg-1-8">
+                 <a href="contactUs.html" class="">Contact</a>
+             </div>
+            <div class="dmenu-item pure-u-1 pure-u-lg-1-8">
+                 <a href="faq.html" class="">FAQ</a>
+             </div>
+             <div id="settings" class="dmenu-item pure-u-1 pure-u-lg-1-8">
+                 <a href="#" class="">Settings</a>
+             </div>
+         </div>
+     </header>
+
+
+    <article>
+
+        <div class="dmenu pure-g">
+            <div id="toc" class="pure-u-3-4 dpanel">
             </div>
-            <div class="dmenu-item pure-u-1 pure-u-md-1-6">
-                <a href="fun.html" class="">Fun</a>
-            </div>
-            <div class="dmenu-item pure-u-1 pure-u-md-1-6">
-                <a href="games.html" class="">Games</a>
-            </div>
-			<div class="dmenu-item pure-u-1 pure-u-md-1-6">
-                <a href="#" class="">GIFs</a>
-            </div>
-            <div class="dmenu-item pure-u-1 pure-u-md-1-6">
-                <a href="contactUs.html" class="">Contact</a>
-            </div>
-			<div class="dmenu-item pure-u-1 pure-u-md-1-6">
-                <a href="faq.html" class="">FAQ</a>
+
+            <div class="pure-u-3-4 dpanel">
+        
+        <div id="doctitle"><h1>Welcome!</h1></div>
+        
+        <h3 id="intro">Hello! 
+         Welcome to our multimedia website. We worked hard on this project and we hope you like it. 
+         This homepage will help you understand what this website is about
+         Enjoy!</h3>
+
+        <div id="doc">
+             <p></p><br />
+
+            <h1>Page Description</h1>
+
+            <h2>Home</h2>
+            <p>
+                Welcome to the Homepage. This page is meant to welcome visitors and contains a short description of each page and more information of the developers. </p>
+
+
+            <h2>Fun</h2>
+            <p>
+                Fun page was the biggest challange for us and was the orginal idea for this website. Using javascript, we wanted to replicate the <a href="http://www.eelslap.com">EelSlap</a> website. The idea is that your mouse cursor/arrow keys would change the frames of a slow motion GIF and the effect would make it seem like the user is in control of the outcome of that particular GIF.
+                </p>
+
+            <h2>Games</h2>
+            <p>
+                Everyone loves games. When you're feeling stressed or just bored, you can always drop by our games page. We offer four classic games that you can enjoy. These games are coded using javascript and can be acessed offline when loaded.
+                </p>
+
+            <h2>GIFs</h2>
+            <p>
+                Lets face it, the internet is all about cats. Our GIFs page offer funny and cute gifs that we post. These gifs are loaded with AJAX which makes it much easier to add/update new gifs.
+            </p>
+
+            <h2>Contact US</h2>
+            <p>
+                We offer all our visitors an oppurtunity to send us comments and questions that they may have at the contact us page. This page will verify certain information is stored in a cookie and that the inforation is in fact valid.
+            </p>
+
+            <h2>FAQ</h2>
+            <p>
+                As a quick guide and to further help visitors understand and feel more comfortable with the website, we added a Frequently Asked Questions page. This page will contain top 10 selected questions that can be navigated with a table of contents (dynamic text). Also another section will offer users to send us a question by filling out a form which when submitted alows the user to email it to us
+
+                <br /></p>
+             <h2></h2>
+            <p></p>
+
+
+
+            <h1>Developpers</h1>
+            <h2>Mark Beiline</h2>
+            <p>
+                Mark is mostly responsible for the overall design of the website (css). He also created the the GIFs page which is loaded with AJAX and some of the games page.
+            </p>
+            <h2>Sherif Ghaffar</h2>
+            <p>
+                Sherif is responsible of the Home page, FAQ page  and 2 of the games in the games page. He worked on the table of contents (toc javascript) as well as keeping track of users last visits (cookies). Design of the toc/doc as well as the form was also done by Sherif.
+            </p>
+
+            <h2>Lucas Kourouklis</h2>
+            <p>
+                Lucas is responsible for the Contact Us page and the fun page.
+                Contact us uses cookies to verify and store the information from a form and the fun page uses javascript to track mouse/key movements and manipulate the frames of a gif. The designs of those pages are also coded by Lucas.
+            </p>
+            
+        </div>
             </div>
         </div>
-    </header>
-<br />
 
+    </article>
 
- 	<div id="toc"></div>
- 	
-    <div id="doctitle"><h1>Welcome!</h1></div>
-	
-    <h3 id="intro">Hello! 
-     Welcome to our multimedia website. We worked hard on this project and we hope you like it. 
-     This homepage will help you understand what this website is about
-     Enjoy!</h3>
-         
-    <div id="doc">
-
-
-         <p></p><br />
-
-        <h1>Description</h1>
-
-        <h2>Home</h2>
-        <p>
-            Welcome to the homepage. This page is meant to welcome visitors and contains a short description of each page and more information of the developers. </p>
-
-
-        <h2>Fun</h2>
-        <p></p>
-
-        <h2>Games</h2>
-        <p></p>
-
-        <h2>GIFs</h2>
-        <p></p>
-
-        <h2>Contact US</h2>
-        <p></p>
-
-        <h2>FAQ</h2>
-        <p><br /></p>
-
-
-        <h1>Members</h1>
-        <h2>Mark Beiline</h2>
-        <p></p>
-        <h2>Sherif Ghaffar</h2>
-        <p></p>
-        <h2>Lucas Kourouklis</h2>
-        <p></p>
-    	
-    </div>
-
-
-	
+        <footer>
+         <div id="footer" class="dfooter">
+             Copyright 2015 Evil Corp
+         </div>
+     </footer>
+     <script src="lib/jquery.js"></script>
+     <script defer="defer" src="scripts/menu.js"></script>
+     <script src="scripts/scroll.js"></script>
+     <script defer="defer" src="scripts/footer.js"></script>
+     <script defer="defer" src="scripts/settings.js"></script>
 
  </body>
  </html>
