@@ -18,5 +18,6 @@ function loadBackground() {
     console.log(document.cookie);
     var cookies = document.cookie.split(";");
     var backgroundSrc = cookies[0].split("=")[1];
-    document.body.style.backgroundImage = 'url("' + unescape(backgroundSrc) + '")';
+    if (backgroundSrc.length > 0)
+        document.body.style.backgroundImage = 'url("' + unescape(backgroundSrc) + '")';
 }

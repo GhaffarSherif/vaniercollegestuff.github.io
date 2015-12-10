@@ -27,4 +27,5 @@ function onGifSelect() {
         else
             e.className = "";
     }
+    delay();
 }

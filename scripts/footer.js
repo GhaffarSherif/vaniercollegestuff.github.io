@@ -8,6 +8,7 @@ function delay() {
 
 function sendFooterBottom()
 {
+    $('#thegif').resize(delay);
     var docHeight = $(window).height();
     var footerHeight = $('#footer').height();
     var footerTop = $('#footer').position().top + footerHeight;
