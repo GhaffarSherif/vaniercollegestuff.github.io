@@ -61,8 +61,10 @@
             </div>
         </div>
     </header>
-
-    YOUR STUFF HERE
+    
+    <article>
+        YOUR STUFF HERE
+    </article>
 
     <footer>
         <div id="footer" class="dfooter">
