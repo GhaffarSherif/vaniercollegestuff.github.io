@@ -1,0 +1,39 @@
+{
+	"Root":
+	{
+		"Text":"You're walking in a long grass field. The sun shines from atop, but the wind is rising, pushing grey clouds towards you.",
+		"Options":
+		{
+			"Sit down for a picnic.":
+			{
+				"Text":"A wild level 100 Magikarp appears! It uses SPLASH. Now your sandwich is all soggy.",
+				"Options":
+				{
+					"Make a fish stew.":
+					{
+						"Text":"As you prepare to bludgeon the creature, rain starts falling. The magikarp is in his element now. He gains power... and evolves into DONALD TRUMP! You faint."
+					},
+					"Capture it using a masterball":
+					{
+						"Text":"Magikarp rattles once or twice inside the ball, and ESCAPES. Sadly you're all out of masterballs.",
+						"Options":
+						{
+							"Decide that the gods are conspiring against you and leave.":
+							{
+								"Text":"Zeus hits you with his lightning. All you ever wanted was a picnic."
+							},
+							"Make a fish stew.":
+							{
+								"Text":"As you prepare to bludgeon the creature, rain starts falling. The magikarp is in his element now. He gains power... and evolves into DONALD TRUMP! You faint."
+							}
+						}
+					}
+				}
+			},
+			"It might rain. Go home.":
+			{
+				"Text":"Wow. That's boring. Try again."
+			}
+		}
+	}
+}
