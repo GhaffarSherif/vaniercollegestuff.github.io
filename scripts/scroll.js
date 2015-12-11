@@ -15,7 +15,6 @@ function startMove() {
 }
 
 function loadBackground() {
-    console.log(document.cookie);
     var cookies = document.cookie.split(";");
     var backgroundSrc = cookies[0].split("=")[1];
     if (backgroundSrc.length > 0)
