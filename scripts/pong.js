@@ -151,6 +151,7 @@ var Ball = function() {
 		}
 		else if (this.intersects(this.paddleRight)) {
 			this.velx = -Math.abs(this.velx);
+			this.vely = this.dy(this.paddleRight) / this.paddleRight.height * this.speed * 1.25;
 		}
 	}
 	this.draw = function() {
