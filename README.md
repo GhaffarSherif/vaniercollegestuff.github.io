@@ -1,13 +1,3 @@
-# Still need to confirm we have
-* forms and regex
-* rollovers and slideshows
-* popup windows and frames
-* object-based programming
-
-# Also put your files in the appropriate folders so we don't have a mess
-* .css into styles
-* .js into scripts
-
 # BEAUTIFUL FRAMES
 ```
 <div class="dmenu pure-g">
