@@ -32,7 +32,7 @@ function submitq() {
 
 
 
-  var showScore = "Your Score: " + calcScore + "\n Also, we lied about the iphone;
+  var showScore = "Your Score: " + calcScore + "\n Also, we lied about the iphone";
 
   if (calcScore === 7) {
     showScore = showScore + "&nbsp; <strong>Perfect Score!</strong>"
