@@ -12,6 +12,10 @@
 
 */
 
+p, h2 {
+	text-align: left;
+}
+
 #toc                   {
                         border: 3px solid black; background-color: rgb(48,0,24);  padding: 4px; text-align: left}
 
