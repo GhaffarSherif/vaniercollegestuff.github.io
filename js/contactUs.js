@@ -3,6 +3,26 @@ window.onload = startForm;
 function startForm()
 {
 	document.forms[0].onsubmit = checkForm;
+	
+	if(retrieveCookie("contactInfo"))
+	{
+		var tymsg = document.getElementById("tymsg");
+		
+		tymsg.innerHTML = "Thank you for contacting us " + retrieveMCookie("contactInfo", "fname") + " " + retrieveMCookie("contactInfo", "lname") + ". We will reach you at " + retrieveMCookie("contactInfo", "email") + ".";
+    }
+	
+	/*if(retrieveMCookie("contactInfo"))
+	{
+		var allInputs = document.getElementsByTagName("input");
+		for (var i = 0; i < allInputs.length; i++)
+		{
+			if(allInputs[i].type == "text")
+			{
+				if (retrieveCookie(allInputs[i].id))
+					allInputs[i].value = retrieveCookie(allInputs[i].id);
+			}
+		}
+    }*/
 }
 
 function testLength(field)
@@ -68,7 +88,7 @@ function checkForm()
 	else
 	{
 		saveInfo();
-		alert("Thank you for contacting us!");
+		//alert("Thank you for contacting us!");
 		return true;
 	}
 }
